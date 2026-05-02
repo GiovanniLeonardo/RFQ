@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; padding: 20px; }
+        .form-container { background: white; max-width: 500px; margin: auto; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; text-align: center; }
+        label { display: block; margin: 15px 0 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; background: #27ae60; color: white; border: none; padding: 12px; margin-top: 20px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #219150; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Supplier Quote Entry</h2>
+        <form id="quoteForm">
+            <label>Project/Site ID</label>
+            <input type="text" name="siteId" placeholder="e.g. ATL-001" required>
+            
+            <label>Supplier Name</label>
+            <input type="text" name="supplierName" placeholder="Your Company Name" required>
+            
+            <label>Monthly Recurring Cost (MRC)</label>
+            <input type="number" name="mrc" step="0.01" placeholder="0.00" required>
+            
+            <label>Non-Recurring Cost (NRC)</label>
+            <input type="number" name="nrc" step="0.01" placeholder="0.00" required>
+            
+            <label>Contract Term (Months)</label>
+            <select name="term">
+                <option value="12">12 Months</option>
+                <option value="36">36 Months</option>
+                <option value="60">60 Months</option>
+            </select>
+            
+            <button type="submit">Submit Official Quote</button>
+        </form>
+    </div>
+</body>
+</html>
